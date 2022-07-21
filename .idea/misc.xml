@@ -9,6 +9,9 @@
         <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/layout/fragment_add_note.xml" value="0.3161231884057971" />
         <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/layout/fragment_list.xml" value="0.3161231884057971" />
         <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/layout/fragment_update_note.xml" value="0.3161231884057971" />
+        <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/menu/add_fragment_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/menu/update_fragment_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
