@@ -34,5 +34,8 @@
         <action
             android:id="@+id/action_updateListFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.tugrulbo.todoappwithcleanarth.data.model.ToDoModel" />
     </fragment>
 </navigation>
