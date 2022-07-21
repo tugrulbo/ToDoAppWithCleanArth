@@ -1,10 +1,8 @@
 package com.tugrulbo.todoappwithcleanarth.ui.fragments.home
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.tugrulbo.todoappwithcleanarth.R
 import com.tugrulbo.todoappwithcleanarth.databinding.FragmentListBinding
@@ -25,12 +23,17 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         onClicks()
+        setHasOptionsMenu(true)
     }
 
     private fun onClicks(){
         binding.floatBtnAddNote.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addNoteFragment)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.list_fragment_menu, menu)
     }
 
 
