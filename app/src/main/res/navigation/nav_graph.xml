@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.tugrulbo.todoappwithcleanarth.ui.fragments.home.ListFragment"
-        android:label="fragment_list"
+        android:label="Notes"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_addNoteFragment"
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/addNoteFragment"
         android:name="com.tugrulbo.todoappwithcleanarth.ui.fragments.add_note.AddNoteFragment"
-        android:label="fragment_add_note"
+        android:label="Add"
         tools:layout="@layout/fragment_add_note" >
         <action
             android:id="@+id/action_addNoteFragment_to_listFragment"
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/updateListFragment"
         android:name="com.tugrulbo.todoappwithcleanarth.ui.fragments.update_note.UpdateListFragment"
-        android:label="fragment_update_note"
+        android:label="Update"
         tools:layout="@layout/fragment_update_note" >
         <action
             android:id="@+id/action_updateListFragment_to_listFragment"
