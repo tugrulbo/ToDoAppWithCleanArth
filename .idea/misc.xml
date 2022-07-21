@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/layout/fragment_add_note.xml" value="0.3161231884057971" />
+        <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/layout/fragment_list.xml" value="0.3161231884057971" />
+        <entry key="..\:/Users/tugrulbo/Documents/GitHub/ToDoAppWithCleanArth/app/src/main/res/layout/fragment_update_note.xml" value="0.3161231884057971" />
       </map>
     </option>
   </component>
