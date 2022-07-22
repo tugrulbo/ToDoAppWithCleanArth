@@ -9,7 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.tugrulbo.todoappwithcleanarth.R
-import com.tugrulbo.todoappwithcleanarth.data.model.Priority
 import com.tugrulbo.todoappwithcleanarth.data.model.ToDoModel
 import com.tugrulbo.todoappwithcleanarth.databinding.FragmentUpdateNoteBinding
 import com.tugrulbo.todoappwithcleanarth.ui.SharedToDoViewModel
@@ -21,14 +20,10 @@ class UpdateListFragment : Fragment() {
     private val viewModel:SharedToDoViewModel by viewModels()
     private val args: UpdateListFragmentArgs by navArgs()
 
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentUpdateNoteBinding.inflate(inflater,container,false)
         return binding.root
     }
