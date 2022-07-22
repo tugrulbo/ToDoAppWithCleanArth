@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tugrulbo.todoappwithcleanarth.R
 import com.tugrulbo.todoappwithcleanarth.databinding.FragmentListBinding
 import com.tugrulbo.todoappwithcleanarth.ui.SharedToDoViewModel
@@ -79,7 +80,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         val listAdapter = ListAdapter()
         binding.rvHomeFragment.apply {
             adapter = listAdapter
-            layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+            layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
             itemAnimator = LandingAnimator().apply {
                 addDuration = 300
             }
@@ -95,6 +96,14 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.menu_delete_all){
             confirmedItemRemoval()
+        }
+
+        when(item.itemId){
+            R.id.menu_delete_all -> confirmedItemRemoval()
+            R.id.menu_priority_Low -> viewmodel.getLowPriority.observe(viewLifecycleOwner, Observer {
+                todoAdapter.setData(it) })
+            R.id.menu_priority_high -> viewmodel.getHighPriority.observe(viewLifecycleOwner, Observer {
+                todoAdapter.setData(it) })
         }
         return super.onOptionsItemSelected(item)
     }
