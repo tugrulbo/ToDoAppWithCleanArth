@@ -71,25 +71,21 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
 
     private fun setupRecyclerView(){
 
-        val listAdapter = ListAdapter()
+        todoAdapter = ListAdapter()
         binding.rvHomeFragment.apply {
-            adapter = listAdapter
+            adapter = todoAdapter
             layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
         }
 
         viewmodel.getAllData.observe(viewLifecycleOwner, Observer {data->
             viewmodel.checkIfDatabaseEmpty(data)
-            listAdapter.setData(data)
+            todoAdapter.setData(data)
             binding.rvHomeFragment.scheduleLayoutAnimation()
 
         })
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.menu_delete_all){
-            confirmedItemRemoval()
-        }
-
         when(item.itemId){
             R.id.menu_delete_all -> confirmedItemRemoval()
             R.id.menu_priority_Low -> viewmodel.getLowPriority.observe(viewLifecycleOwner, Observer {
