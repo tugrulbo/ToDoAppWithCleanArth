@@ -27,6 +27,12 @@ class SharedToDoViewModel(application: Application):AndroidViewModel(application
 
     var getAllData:LiveData<List<ToDoModel>> = repository?.getAllData!!
 
+    var getHighPriority : LiveData<List<ToDoModel>> = repository?.getHighPriority!!
+
+    var getLowPriority : LiveData<List<ToDoModel>> = repository?.getLowPriority!!
+
+
+
     val listener :AdapterView.OnItemSelectedListener = object :AdapterView.OnItemSelectedListener{
         override fun onItemSelected(
             parent: AdapterView<*>?,
