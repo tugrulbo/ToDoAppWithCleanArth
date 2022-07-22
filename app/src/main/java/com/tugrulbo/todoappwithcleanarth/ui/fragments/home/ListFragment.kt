@@ -4,21 +4,15 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.widget.SearchView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tugrulbo.todoappwithcleanarth.R
 import com.tugrulbo.todoappwithcleanarth.databinding.FragmentListBinding
 import com.tugrulbo.todoappwithcleanarth.ui.SharedToDoViewModel
 import com.tugrulbo.todoappwithcleanarth.ui.fragments.home.adapter.ListAdapter
-import jp.wasabeef.recyclerview.animators.LandingAnimator
-import jp.wasabeef.recyclerview.animators.SlideInUpAnimator
 
 class ListFragment : Fragment(), SearchView.OnQueryTextListener {
 
@@ -81,14 +75,12 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         binding.rvHomeFragment.apply {
             adapter = listAdapter
             layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
-            itemAnimator = LandingAnimator().apply {
-                addDuration = 300
-            }
         }
 
         viewmodel.getAllData.observe(viewLifecycleOwner, Observer {data->
             viewmodel.checkIfDatabaseEmpty(data)
             listAdapter.setData(data)
+            binding.rvHomeFragment.scheduleLayoutAnimation()
 
         })
     }

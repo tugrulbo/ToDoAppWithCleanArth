@@ -1,14 +1,12 @@
 package com.tugrulbo.todoappwithcleanarth.ui.fragments.add_note
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.tugrulbo.todoappwithcleanarth.R
-import com.tugrulbo.todoappwithcleanarth.data.model.Priority
 import com.tugrulbo.todoappwithcleanarth.data.model.ToDoModel
 import com.tugrulbo.todoappwithcleanarth.databinding.FragmentAddNoteBinding
 import com.tugrulbo.todoappwithcleanarth.ui.SharedToDoViewModel
@@ -21,7 +19,6 @@ class AddNoteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentAddNoteBinding.inflate(inflater,container,false)
         return binding.root
     }
@@ -30,7 +27,6 @@ class AddNoteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.spinnerPriorty.onItemSelectedListener = viewModelShared.listener
-
         setHasOptionsMenu(true)
 
     }
@@ -58,7 +54,6 @@ class AddNoteFragment : Fragment() {
                 desc = desc,
                 priority = viewModelShared.parsePriority(priority)
             )
-
             viewModelShared.insertData(data)
             Toast.makeText(requireContext(), "Successfully Saved", Toast.LENGTH_SHORT).show()
 

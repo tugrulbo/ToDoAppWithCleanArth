@@ -63,6 +63,4 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-common-java8:2.5.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
 
-    // Recyclerview Animator
-    implementation 'jp.wasabeef:recyclerview-animators:3.0.0'
 }

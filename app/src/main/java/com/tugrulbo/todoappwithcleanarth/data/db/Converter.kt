@@ -1,6 +1,6 @@
 package com.tugrulbo.todoappwithcleanarth.data.db
 
-import androidx.room.TypeConverter
+import  androidx.room.TypeConverter
 import com.tugrulbo.todoappwithcleanarth.data.model.Priority
 
 class Converter {
