@@ -2,6 +2,7 @@ package com.tugrulbo.todoappwithcleanarth.ui.fragments.home
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
@@ -85,6 +86,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         })
     }
 
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.menu_delete_all -> confirmedItemRemoval()
@@ -127,9 +129,8 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         var searchQuery:String = "%$query%"
         todoAdapter = ListAdapter()
         viewmodel.searchQuery(searchQuery)?.observe(viewLifecycleOwner, Observer {list->
-            list?.let {
-                todoAdapter.setData(list)
-            }
+            setupRecyclerView()
+            todoAdapter.setData(list)
         })
     }
 
