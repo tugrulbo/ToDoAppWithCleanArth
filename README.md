@@ -15,7 +15,7 @@
  <img src="https://github.com/tugrulbo/ToDoAppWithCleanArth/blob/main/bandicam%202022-07-22%2006-06-23-269.jpg" width="200"/>
 <img src="https://github.com/tugrulbo/ToDoAppWithCleanArth/blob/main/Screenshot_20220722_061559.png" width="200"/>
  <img src="https://github.com/tugrulbo/ToDoAppWithCleanArth/blob/main/Screenshot_20220722_061606.png" width="200"/>
-  <https://github.com/tugrulbo/ToDoAppWithCleanArth/blob/main/Screenshot_20220722_061555.png" width="200"/>
+  <img src="https://github.com/tugrulbo/ToDoAppWithCleanArth/blob/main/Screenshot_20220722_061555.png" width="200"/>
  </div>
 
 #Video 
