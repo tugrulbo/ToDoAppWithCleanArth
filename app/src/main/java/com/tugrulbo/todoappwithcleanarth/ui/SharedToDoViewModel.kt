@@ -90,9 +90,7 @@ class SharedToDoViewModel(application: Application):AndroidViewModel(application
 
     }
     fun verifyDataFromUser(title:String,desc:String):Boolean{
-        return if(TextUtils.isEmpty(title) || TextUtils.isEmpty(desc)){
-            false
-        }else !(title.isEmpty() || desc.isEmpty())
+        return !(title.isEmpty() || desc.isEmpty())
     }
 
     fun checkIfDatabaseEmpty(toDoData:List<ToDoModel>){
