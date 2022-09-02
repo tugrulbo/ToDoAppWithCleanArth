@@ -4,7 +4,6 @@
 - Getting datas from room, inserting todos, searching todos, updating todos
 
 # Contents
-- MVVM
 - Room
 - Recyclerview with diffUtil
 - Simple recyclerview anim.
